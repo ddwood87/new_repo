@@ -6,8 +6,8 @@ namespace SortSearchTime
     class Program
     {
         static void Main(string[] args)
-        {   Stopwatch time = new Stopwatch();
-            /*
+        {   
+            Stopwatch time = new Stopwatch();
             int size = 100;
             int[] arr = new int[size];
             SetRandom(arr, size);
@@ -26,13 +26,11 @@ namespace SortSearchTime
             time.Stop();
             Console.WriteLine($"Binary search elapsed time: {time.ElapsedMilliseconds} ms");
             time.Reset();
-            */
             int testSize = 10000;
             int[] randomArr = new int[testSize];
-            SetRandom(randomArr, testSize);
-            
+            SetRandom(randomArr, testSize);            
             int[] copyArr = new int[testSize];
-            /*
+
             time.Reset();
             randomArr.CopyTo(copyArr,0);
             //PrintArray(copyArr);
@@ -50,24 +48,6 @@ namespace SortSearchTime
             time.Stop();
             //PrintArray(copyArr);
             Console.WriteLine($"Selection Sort {testSize} items Execution Time : {time.ElapsedMilliseconds} ms");
-            */
-            time.Reset();
-            randomArr.CopyTo(copyArr, 0);
-            PrintArray(copyArr);
-            time.Start();
-            InsertionSort(copyArr);
-            time.Stop();
-            PrintArray(copyArr);
-            Console.WriteLine($"Insertion Sort {testSize} items Execution Time : {time.ElapsedMilliseconds} ms");
-
-            time.Reset();
-            randomArr.CopyTo(copyArr, 0);
-            //PrintArray(copyArr);
-            time.Start();
-            InsertionSort(copyArr);
-            time.Stop();
-            //PrintArray(copyArr);
-            Console.WriteLine($"Insertion Sort {testSize} items Execution Time : {time.ElapsedMilliseconds} ms");
 
             time.Reset();
             randomArr.CopyTo(copyArr, 0);
