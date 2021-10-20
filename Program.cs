@@ -29,6 +29,7 @@ namespace SortSearchTime
             int testSize = 10000;
             int[] randomArr = new int[testSize];
             SetRandom(randomArr, testSize);            
+            
             int[] copyArr = new int[testSize];
 
             time.Reset();
